@@ -22,7 +22,7 @@ var bird, slingShot;
 var gameState = "onSling";
 
 function preload() {
-    
+
     getTime()
     backgroundImg = loadImage("sprites/bg.png");
     
@@ -105,7 +105,7 @@ function keyPressed(){
     
         var response = await fetch ("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
         var responseJson = await response.json()
-        var time = responseJson.dateTime.slice(11,13)
+        var time = responseJson.datetime.slice(11,13)
 
 
         if(time>7&&time<19){
